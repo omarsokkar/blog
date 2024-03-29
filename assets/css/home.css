@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+/* Grid System For Page */
+body{
+    display: grid;
+    grid-template-areas: 
+    "hd"
+    "sec"
+    "ft";
+}
+.main-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 30px 8px 45px;
+    width: 100%;
+    background-color: black;
+    grid-area: hd;
+}
+/* Website Links */
+.hd-links{
+    display: flex;
+    gap: 10px;
+}
+.hd-links a,
+.more-link p,
+.more-link div,
+.hd-btn{
+    color: white;
+    font-size: 20px;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.hd-links a:hover,
+.more-link:hover p,
+.more-link:hover div{
+    color: #ffffffe0;
+}
+.more-link{
+    display: flex;
+    gap: 3px;
+}
+.more-link i{
+    font-size: 15px;
+}
+/* Log In Button */
+.hd-btn{
+    background-color: black;
+    border: 2px solid #fff;
+    padding: 4px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.hd-btn:hover{
+    padding: 4px 20px;
+}
+/* Blog Post Cards Section */
+.main-sec{
+    grid-area: sec;
+    width: 100%;
+}
+.main-title{
+    font-family: "Hurricane", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 50px;
+}
+.blog-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2%;
+    margin: -95px 2% 50px 2%;
+}
+.rht-cards,
+.lft-cards{
+    width: calc(52% / 2);
+}
+.center-cards{
+    width: 42%;
+}
+.blog-cards img{
+    width: 100%;
+}
+.center-cards img{
+    width: 100%;
+}
+.margin-down{
+    margin-top: 20px;
+}
+.blog-title,
+.blog-title-cn{
+    color: #1B849B;
+    font-size: 25px;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 8px;
+}
+.blog-title-cn{
+    font-size: 30px;
+}
+.blog-date,
+.blog-date-cn{
+    font-size: 16px;
+    color: #af3434;
+    font-weight: 600;
+    padding: 4px 0 8px 0;
+}
+.blog-desc,
+.blog-desc-cn{
+    font-size: 15px;
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.read-more-link{
+    color: #af3434;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+    transition: 0.5s ease;
+}
+.read-more-link:hover{
+    color: #8d2929;
+}
+footer{
+    grid-area: ft;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+/* Medium Devices ( landscape tablets ) */
+@media (max-width : 992px) {
+    .main-title{
+        margin-top: 20px;
+    }
+    .blog-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: 20px 0 50px 0;
+    }
+    .rht-cards,
+    .lft-cards{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+    }
+    .rht-cards>div,
+    .lft-cards>div{
+        width: calc(90% / 2);
+    }
+    .margin-down{
+        margin: 0;
+    }
+    .center-cards{
+        width: 65%;
+        margin: 50px 0;
+    }
+    .read-more-link{
+        margin-top: 20px;
+    }
+}
+/* Small Devices ( portrait tablets and large phones ) */
+@media (max-width : 768px){
+    .rht-cards,
+    .lft-cards{
+        width: 93%;
+        gap: 2em;
+    }
+    .rht-cards>div,
+    .lft-cards>div{
+        width: calc(93% / 2);
+    }
+    .center-cards{
+        margin: 35px 0;
+    }
+}
+/* Extra Small Devices ( phones ) */
+@media (max-width : 600px){
+    .main-heading{
+        padding: 10px;
+    }
+    .hd-links{
+        gap: 5px;
+    }   
+    .hd-links a,
+    .more-link p,
+    .more-link div,
+    .hd-btn{
+        font-size: 18px;
+    }
+    .more-link{
+        gap: 2px;
+    }
+    .more-link i{
+        font-size: 15px;
+    }
+    .hd-btn{
+        padding: 4px 12px;
+        font-size: 15px;
+    }
+    .main-title{
+        font-size: 45px;
+        margin-top: 10px;
+    }
+    .blog-cards{
+        margin: 10px 0 50px 0;
+    }
+    .rht-cards,
+    .lft-cards{
+        width: 100%;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .rht-cards>div,
+    .lft-cards>div{
+        width: 90%;
+    }
+    .center-cards{
+        width: 90%;
+        margin: 2em 0;
+    }
+}
+@media (max-width: 360px) {
+    .hd-btn{
+        display: none;
+    }
+}
